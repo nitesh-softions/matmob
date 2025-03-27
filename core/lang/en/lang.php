@@ -1133,4 +1133,9 @@ return array (
   'already_logged_in_as_user_name' => 'Already logged in as :user_name.',
   'compare' => 'Compare',
   'wedding_caterers' => 'Wedding Caterers',
+  'new_section' => 'New Section',
+  'brand' => 'Brand',
+  'lets_find_a_mobile_for_you' => 'Let\'s Find a Mobile For You',
+  'key_specifications' => 'Key Specifications',
+  'latest_articals' => 'Latest Articals',
 );

@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="{{ asset($activeThemeAssets.'assets/css/style.css') }}">
 <link rel="stylesheet" href="{{ asset($activeThemeAssets.'assets/css/slick.css') }}">
 <link rel="stylesheet" href="{{ asset($activeThemeAssets.'assets/css/color.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 @if(current_language()->direction == 'rtl')
     <link rel="stylesheet" href="{{ asset($activeThemeAssets.'assets/css/rtl.css') }}">
 @endif

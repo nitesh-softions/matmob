@@ -1445,4 +1445,9 @@ return array (
   'removed_to_favorites' => 'Removed to Favorites.',
   'compare' => 'Compare',
   'wedding_caterers' => 'Wedding Caterers',
+  'new_section' => 'New Section',
+  'brand' => 'Brand',
+  'lets_find_a_mobile_for_you' => 'Let\'s Find a Mobile For You',
+  'key_specifications' => 'Key Specifications',
+  'latest_articals' => 'Latest Articals',
 );

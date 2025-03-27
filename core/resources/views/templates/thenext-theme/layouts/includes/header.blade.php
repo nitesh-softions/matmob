@@ -6,7 +6,7 @@
         @if(session()->get('quick_admin_user_id'))
             <div class="notification notice margin-bottom-0 padding-bottom-10 padding-top-10">
                 <div class="d-flex justify-content-between">
-                    <span>{!! ___('You are logged in as :user_name.', ['user_name' => '<strong>'.request()->user()->name.'</strong>']) !!}</span>
+                    <span>{!! ___('You are logged in as :user_name.', ['user_name' => '<strong>' . request()->user()->name . '</strong>']) !!}</span>
                     <a href="{{ route('logout') }}"
                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ ___('Exit') }}
                     </a>
@@ -42,16 +42,52 @@
                     <div id="logo">
                         <a href="{{ route('home') }}">
                             @php
-                                $logo_white = asset('storage/logo/'.@$settings->site_logo_footer);
-                                $logo_dark = asset('storage/logo/'.$settings->site_logo);
+$logo_white = asset('storage/logo/' . @$settings->site_logo_footer);
+$logo_dark = asset('storage/logo/' . $settings->site_logo);
                             @endphp
-                            <img src="{{ $logo_dark }}" data-sticky-logo="{{ $logo_dark }}"
+                            <img src="{{ $logo_white }}" data-sticky-logo="{{ $logo_white }}"
                                  data-transparent-logo="{{ $logo_white }}" alt="{{ @$settings->site_title }}">
                         </a>
                     </div>
+                    <div id="search-menu" class="d-none d-lg-block">
+                        <form autocomplete="off" method="get" action="{{ route('search.index') }}" accept-charset="UTF-8">
+                            @csrf
+                            <div class="intro-banner-search-form">
+                                <div class="intro-search-field">
+                                    <input id="intro-keywords" type="text" class="qucikad-ajaxsearch-input"
+                                        placeholder="{{ ___('What are you looking for?') }}" data-prev-value="0"
+                                        data-noresult="More results for">
+                                    <i class="qucikad-ajaxsearch-close fa fa-times-circle" aria-hidden="true"
+                                        style="display: none;"></i>
+                                </div>
+                                <div class="intro-search-field with-autocomplete live-location-search">
+                                    <div class="input-with-icon">
+                                        <input type="text" id="searchStateCity" name="location" placeholder="Where">
+                                        <i class="la la-map-marker"></i>
+                                        <div data-option="yes" class="loc-tracking"><i class="fa fa-crosshairs"></i></div>
+                                        <input type="hidden" name="latitude" id="latitude" value="">
+                                        <input type="hidden" name="longitude" id="longitude" value="">
+                                        <input type="hidden" name="placetype" id="searchPlaceType" value="">
+                                        <input type="hidden" name="placeid" id="searchPlaceId" value="">
+                                        <input type="hidden" id="input-keywords" name="keywords" value="">
+                                        <input type="hidden" id="input-maincat" name="cat" value="" />
+                                        <input type="hidden" id="input-subcat" name="subcat" value="" />
+                                    </div>
+                                </div>
+                                <div class="intro-search-button">
+                                    <button class="button ripple-effect">{{ ___('Search') }}</button>
+                                </div>
+                            </div>
+                        </form>
+                
+                        <div class="text-center visible-md visible-lg"></div>
+                        <div class="text-center visible-sm"></div>
+                        <div class="text-center visible-xs"></div>
+                    </div>
+                    
                     <nav class="navigation">
                         <ul>
-                            @if(@$settings->country_type == 'multi')
+                            <!-- @if(@$settings->country_type == 'multi')
                             <li>
                                 <a href="#countryModal" class="country-flag popup-with-zoom-anim"
                                    title="Change Country"
@@ -60,13 +96,14 @@
                                     <img src="{{ asset('assets/global/plugins/flags/') }}/images/{{ strtolower($session_country) }}.png"/>
                                 </a>
                             </li>
-                            @endif
-                            <li class="d-none d-lg-block">
+                            @endif -->
+                            <!-- <li class="d-none d-lg-block">
                                 <a href="{{ route('search.index') }}"><i class="icon-feather-list"></i> {{ ___("Find Vendor's") }}</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </nav>
                     <div class="clearfix"></div>
+                    
                     <!-- Mobile Navigation -->
                     <nav class="mmenu-init">
                         <ul class="mm-listview">
@@ -97,7 +134,7 @@
                 </div>
                 <div class="right-side">
                     @guest
-                        <div class="header-widget d-none d-lg-block">
+                        <div class="header-widget d-none d-lg-flex">
                             <nav class="navigation">
                                 <ul>
                                     <li>
@@ -158,7 +195,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="header-widget d-none d-lg-block">
+                        <div class="header-widget d-none d-lg-flex">
                             <nav class="navigation">
                                 <ul>
                                     <li><a href="{{ route('posts.create') }}" class="button ripple-effect post-job">
@@ -172,10 +209,10 @@
 
                     @if($settings->userlangsel)
                         @php
-                            $language = current_language();
+    $language = current_language();
                         @endphp
                         <div class="header-widget">
-                            <div class="btn-group bootstrap-select language-switcher">
+                            <div class="btn-group bootstrap-select language-switcher mt-lg-2">
                                 <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown"
                                         title="{{ $language->name }}">
                                     <span class="filter-option pull-left"

@@ -20,7 +20,7 @@
 
     <!-- Layout container -->
         <div class="layout-page">
-            <!-- Page Header Start-->
+        <!-- Page Header Start-->
         @include('admin.includes.header')
         <!-- Content wrapper -->
             <div class="content-wrapper">
