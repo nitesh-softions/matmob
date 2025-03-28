@@ -22,12 +22,12 @@
     <div class="container margin-bottom-50">
         <div class="business-info">
             <div class="row">
-                <div class="col-sm-8">
+                <div class="col-lg-8">
                     <div class="contactUs">
-                        <h2 class="margin-bottom-30">{{ ___('Contact Us') }}</h2>
+                        <h2 class="mb-3">{{ ___('Contact Us') }}</h2>
                         <form id="contact-form" class="contact-form" name="contact-form" method="post" action="{{ route('contact') }}">
                             @csrf
-                            <div class="row">
+                            <div class="row mw-100 mx-auto">
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <input type="text" class="with-border" required="required"
@@ -69,7 +69,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group px-1">
                                 <button type="submit" name="Submit" class="button">{{ ___('Send Message') }}</button>
                             </div>
                         </form>
@@ -77,7 +77,7 @@
                 </div>
                 <!-- Enquiry Form-->
                 <!-- contact-detail -->
-                <div class="col-sm-4">
+                <div class="col-lg-4">
                     <div class="dashboard-box margin-top-0">
                         <div class="headline">
                             <h3>{{ ___('Get In Touch') }}</h3>
@@ -93,18 +93,17 @@
                         <div class="content with-padding">
                             <ul>
                                 @if($settings->contact_address)
-                                    <li class="job-property margin-bottom-10"><i
-                                            class="la la-map-marker"></i> {{ $settings->contact_address }}</li>
+                                    <li class="job-property margin-bottom-10"><i class="la la-map-marker"></i> {{ $settings->contact_address }}</li>
                                 @endif
                                 @if($settings->contact_phone)
                                     <li class="job-property margin-bottom-10"><i class="la la-phone"></i>
-                                        <a href="tel:{{ $settings->contact_phone }}"
-                                           rel="nofollow">{{ $settings->contact_phone }}</a></li>
+                                        <a href="tel:{{ $settings->contact_phone }}" rel="nofollow">{{ $settings->contact_phone }}</a>
+                                    </li>
                                 @endif
                                 @if($settings->contact_email)
-                                    <li class="job-property margin-bottom-10"><i class="la la-envelope"></i>
-                                        <a href="mailto:{{ $settings->contact_email }}"
-                                           rel="nofollow">{{ $settings->contact_email }}</a></li>
+                                    <li class="job-property"><i class="la la-envelope"></i>
+                                        <a href="mailto:{{ $settings->contact_email }}" rel="nofollow">{{ $settings->contact_email }}</a>
+                                    </li>
                                 @endif
                             </ul>
                         </div>
@@ -115,7 +114,7 @@
             <!-- row -->
         </div>
     </div>
-    {!! ads_on_bottom() !!}
+    <!-- {!! ads_on_bottom() !!} -->
     @push('scripts_at_bottom')
         {!! google_captcha() !!}
     @endpush

@@ -115,7 +115,7 @@
                         <!-- Sidebar Widget -->
                         <div class="sidebar-widget">
                             <div class="job-detail-box">
-                                <div class="job-detail-box-headline text-center">{{ ___('Contact to') }} {{ $post->title }}</div>
+                                <!-- <div class="job-detail-box-headline text-center">{{ ___('Contact to') }} {{ $post->title }}</div> -->
                                 <!-- <div class="job-detail-box-inner">
                                     <div class="job-company-logo">
                                         <a href="{{ route('profile', $post->user->username) }}">

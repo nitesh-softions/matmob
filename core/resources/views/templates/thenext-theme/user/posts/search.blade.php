@@ -319,7 +319,7 @@
                                                 @endif
                                             </div>
                                             
-                                            <div class="job-listing-footer with-icon">
+                                            <!-- <div class="job-listing-footer with-icon">
                                                 <ul>
                                                     <li><a href="{{ route('profile', $post->user->username) }}"><i class="la la-user"></i> {{ $post->user->username }}</a></li>
                                                     <li><a class="locationStorage" href="{{ route('search.city', [@$post->city->name,@$post->city->id]) }}" data-id="{{ @$post->city->id }}" data-name="{{ @$post->city->name }}" data-type="city">
@@ -345,7 +345,7 @@
                                                     </span>
                                                     @endif
                                                 @endauth
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -372,7 +372,7 @@
 
     </form>
 
-    {!! ads_on_bottom() !!}
+    <!-- {!! ads_on_bottom() !!} -->
     @push('scripts_at_bottom')
         <script type="text/javascript">
             $('#sort-filter').on('change', function (e) {

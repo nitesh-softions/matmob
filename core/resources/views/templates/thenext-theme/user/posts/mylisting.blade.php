@@ -81,9 +81,9 @@
                                     @if($post->hide == '1') <span class="badge red label-hidden"> {{ ___('Hidden') }}</span> @endif
                                 </td>
                                 <td width="12%">
-                                    <a href="{{ route('posts.edit', $post->id) }}" class="button gray ripple-effect ico" data-tippy-placement="top" title="{{ ___('Edit') }}"><i class="icon-feather-edit"></i></a>
+                                    <a href="{{ route('posts.edit', $post->id) }}" class="button gray ripple-effect ico text-dark" data-tippy-placement="top" title="{{ ___('Edit') }}"><i class="icon-feather-edit"></i></a>
 
-                                    <a class="button gray ripple-effect ico item-js-hide" href="#" data-ajax-action="{{ route('posts.setShowHide',$post->id) }}"  data-tippy-placement="top" title="{{ $post->hide == '0' ? "hide" : "show" }}">
+                                    <a class="button gray ripple-effect ico item-js-hide text-dark" href="#" data-ajax-action="{{ route('posts.setShowHide',$post->id) }}"  data-tippy-placement="top" title="{{ $post->hide == '0' ? "hide" : "show" }}">
                                         <i class="fa {{ $post->hide == '0' ? "fa-eye-slash" : "fa-eye" }}"></i>
                                     </a>
 

@@ -26,25 +26,25 @@
                         <strong>{{ ___('Select Category') }}s</strong>
                     </div>
                   <div class="tg-categories select-category post-option">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-6 g-3"> <!-- Bootstrap Grid -->
-        @foreach(categories() as $cat)
-            <div class="col">
-                <div class="tg-category-custom @if(isset($post) && $post->category_id == $cat->id) selected @endif" data-ajax-catid="{{ $cat->id }}" data-cat-name="{{ $cat->get_translated_title() }}">
-                    <div class="tg-categoryholder">
-                        <div class="mb-1">
-                            @if($cat->picture != "")
-                                <img src="{{ $cat->picture }}" class="img-fluid"> <!-- Ensures responsive image -->
-                            @else
-                                <i class="{{ $cat->icon }}"></i>
-                            @endif
-                        </div>
-                        <h5 class="mt-2"><a style="text-align:center; display:flex;" href="javascript:void()">{{ $cat->get_translated_title() }}</a></h5>
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-6 g-3 mt-4">
+                        @foreach(categories() as $cat)
+                            <div class="col">
+                                <div class="tg-category-custom @if(isset($post) && $post->category_id == $cat->id) selected @endif" data-ajax-catid="{{ $cat->id }}" data-cat-name="{{ $cat->get_translated_title() }}">
+                                    <div class="tg-categoryholder">
+                                        <div class="mb-1">
+                                            @if($cat->picture != "")
+                                                <img src="{{ $cat->picture }}" class="img-fluid"> <!-- Ensures responsive image -->
+                                            @else
+                                                <i class="{{ $cat->icon }}"></i>
+                                            @endif
+                                        </div>
+                                        <h5 class="mt-2"><a style="text-align:center; display:flex;" href="javascript:void()">{{ $cat->get_translated_title() }}</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
-            </div>
-        @endforeach
-    </div>
-</div>
 
                     {{-- <ul class="tg-subcategories" style="display: none">
                         <li>
@@ -393,44 +393,44 @@
                                         <div class="payment-tab-content">
                                             <p>{{ ___('You can optionally select some upgrades to get the best results.') }}</p>
                                             <div class="row premium-plans">
-                                                <div class="col-lg-3">
+                                                <div class="col-lg-4">
                                                     <div class="checkbox">
                                                         <input type="checkbox" id="featured" name="featured" value="1" onchange="fillPrice(this,{{ $plan->settings->featured_project_fee }});">
                                                         <label for="featured"><span class="checkbox-icon"></span> <span class="badge blue">{{ ___('Featured') }}</span></label>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 premium-plans-text">
+                                                <div class="col-lg-8 premium-plans-text">
                                                     {{ ___('Featured ads attract higher-quality viewer and are displayed prominently in the Featured ads section home page.') }}
                                                 </div>
-                                                <div class="col-lg-3 premium-plans-price">
+                                                <div class="col-lg-12 premium-plans-price">
                                                     {{ price_symbol_format($plan->settings->featured_project_fee) }}
                                                 </div>
                                             </div>
                                             <div class="row premium-plans">
-                                                <div class="col-lg-3">
+                                                <div class="col-lg-4">
                                                     <div class="checkbox">
                                                         <input type="checkbox" id="urgent" name="urgent" value="1" onchange="fillPrice(this,{{ $plan->settings->urgent_project_fee }});">
                                                         <label for="urgent"><span class="checkbox-icon"></span> <span class="badge yellow">{{ ___('Urgent') }}</span></label>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 premium-plans-text">
+                                                <div class="col-lg-8 premium-plans-text">
                                                     {{ ___('Make your ad stand out and let viewer know that your advertise is time sensitive.') }}
                                                 </div>
-                                                <div class="col-lg-3 premium-plans-price">
+                                                <div class="col-lg-12 premium-plans-price">
                                                     {{ price_symbol_format($plan->settings->urgent_project_fee) }}
                                                 </div>
                                             </div>
                                             <div class="row premium-plans">
-                                                <div class="col-lg-3">
+                                                <div class="col-lg-4">
                                                     <div class="checkbox">
                                                         <input type="checkbox" id="highlight" name="highlight" value="1" onchange="fillPrice(this,{{ $plan->settings->highlight_project_fee }});">
                                                         <label for="highlight"><span class="checkbox-icon"></span> <span class="badge red">{{ ___('Highlight') }}</span></label>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 premium-plans-text">
+                                                <div class="col-lg-8 premium-plans-text">
                                                     {{ ___('Make your ad highlighted with border in listing search result page. Easy to focus.') }}
                                                 </div>
-                                                <div class="col-lg-3 premium-plans-price">
+                                                <div class="col-lg-12 premium-plans-price">
                                                     {{ price_symbol_format($plan->settings->urgent_project_fee) }}
                                                 </div>
                                             </div>

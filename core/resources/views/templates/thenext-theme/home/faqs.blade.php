@@ -49,5 +49,5 @@
         </div>
         <!-- faq-page -->
     </div>
-    {!! ads_on_bottom() !!}
+    <!-- {!! ads_on_bottom() !!} -->
 @endsection

@@ -64,5 +64,5 @@
     </div>
     <div class="margin-top-80"></div>
 
-    {!! ads_on_bottom() !!}
+    <!-- {!! ads_on_bottom() !!} -->
 @endsection

@@ -46,5 +46,5 @@
         </div>
         {{ $testimonials->links($activeTheme.'pagination/default') }}
     </div>
-    {!! ads_on_bottom() !!}
+    <!-- {!! ads_on_bottom() !!} -->
 @endsection

@@ -76,7 +76,7 @@
     </div>
 
     </div>
-    {!! ads_on_bottom() !!}
+    <!-- {!! ads_on_bottom() !!} -->
     @push('scripts_at_bottom')
         {!! google_captcha() !!}
     @endpush

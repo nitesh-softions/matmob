@@ -202,24 +202,24 @@
                                 <h3>By Brands</h3>
                                 <div class="brands-grid">
                                     <div class="brand-item">
-                                        <img src="apple-logo.png" alt="iPhone">
+                                        <img src="{{ asset('assets/templates/thenext-theme/assets/images/apple-logo.png') }}">
                                         <span>iPhone</span>
                                     </div>
                                     <div class="brand-item">
-                                        <img src="samsung-logo.png" alt="Samsung">
+                                        <img src="{{ asset('assets/templates/thenext-theme/assets/images/samsung-logo.png') }}">
                                         <span>Samsung</span>
                                     </div>
                                     <div class="brand-item">
-                                        <img src="realme-logo.png" alt="Realme">
+                                        <img src="{{ asset('assets/templates/thenext-theme/assets/images/realme-logo.png') }}">
                                         <span>Realme</span>
                                     </div>
                                     <div class="brand-item">
-                                        <img src="oppo-logo.png" alt="Oppo">
-                                        <span>Oppo</span>
+                                        <img src="{{ asset('assets/templates/thenext-theme/assets/images/nothing-logo.png') }}">
+                                        <span>Nothing</span>
                                     </div>
                                     <div class="brand-item">
-                                        <img src="vivo-logo.png" alt="Vivo">
-                                        <span>Vivo</span>
+                                        <img src="{{ asset('assets/templates/thenext-theme/assets/images/oppo-logo.png') }}">
+                                        <span>Oppo</span>
                                     </div>
                                 </div>
                             </div>
